@@ -20,7 +20,7 @@ async def on_message(message):
   tokens = nltk.pos_tag(temp)
   for index in range(len(tokens)-1,-1,-1):
     if "VB" in tokens[index][1]:
-      if random.randint(0,9) == 0:
+      if random.randint(0,19) == 0:
         with open(SUSSY, "rb") as f:
           base_word = WordNetLemmatizer().lemmatize(tokens[index][0],'v')
           await message.channel.send(base_word.upper() + " THIS", file=discord.File(f))
